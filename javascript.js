@@ -23,10 +23,10 @@ if (prefersDarkScheme.matches) {
   document.body.classList.remove("dark-theme");
 }
 
-//   dark = function dark() {
-//     var element = document.body;
-//     element.classList.toggle("dark-mode");
-//  }
+  dark = function dark() {
+    var element = document.body;
+    element.classList.toggle("dark-theme");
+ }
 
     // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
