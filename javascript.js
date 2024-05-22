@@ -30,7 +30,7 @@ function myFunction() {
     content.style.backgroundColor = "var(--melon)";
   }
   else {
-    content.style.backgroundColor = "#ffffff";
+    content.style.backgroundColor = "";
   }
 
   
