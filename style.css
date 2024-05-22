@@ -19,6 +19,22 @@
     transition-timing-function: ease;
 }
 
+.loading {
+    font-size: medium;
+    position:absolute;
+    left: 50%;
+    top:50%;
+}
+
+.overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}
+
+.overlay.loaded {
+  opacity: 1;
+}
+
 body {
     background-color: #efefef;
     margin: 0;
