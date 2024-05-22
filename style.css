@@ -11,6 +11,13 @@
 
 }
 
+#toggle-mode {
+    stroke-width: 5px;
+    font-size: 12px;
+    height: 32px;
+    padding:5px;
+}
+
 * {
     text-transform: uppercase;
     font-family: "Teachers", sans-serif;

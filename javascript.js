@@ -19,13 +19,33 @@ const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 if (prefersDarkScheme.matches) {
   document.body.classList.add("dark-theme");
+  document.getElementById("toggle-mode").innerHTML = "Light Mode";
+  document.getElementById("toggle-mode").style.backgroundColor = "#e9e9ed";
+  document.getElementById("toggle-mode").style.color = "#2b2a33";
 } else {
   document.body.classList.remove("dark-theme");
+  document.getElementById("toggle-mode").innerHTML = "Dark Mode";
+  document.getElementById("toggle-mode").style.backgroundColor = "#2b2a33";
+  document.getElementById("toggle-mode").style.color = "#e9e9ed";
+  
 }
 
   dark = function dark() {
     var element = document.body;
     element.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")){
+      document.getElementById("toggle-mode").innerHTML = "Light Mode";
+      document.getElementById("toggle-mode").style.backgroundColor = "#e9e9ed";
+      document.getElementById("toggle-mode").style.color = "#2b2a33";
+    }
+    else
+    {
+      document.getElementById("toggle-mode").innerHTML = "Dark Mode";
+      document.getElementById("toggle-mode").style.backgroundColor = "#2b2a33";
+      document.getElementById("toggle-mode").style.color = "#e9e9ed";
+    }
+      
+    
  }
 
     // When the user scrolls the page, execute myFunction
