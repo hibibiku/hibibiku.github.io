@@ -13,6 +13,10 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    box-sizing: inherit;
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
 }
 
 body {
@@ -28,6 +32,18 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: 81px;
+}
+
+h2 {
+    color: var(--paynes-gray);
+    text-transform: uppercase;
+}
+
+.home-link {
+    margin-left:2%;
+    text-decoration: none;
+    align-content: center;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -38,36 +54,87 @@ body {
 }
   
   /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-    padding-top: 100px;
+.sticky + .content-div {
+    padding-top: 81px;
 }
 
 .nav-menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     width:30%;
     align-items: center;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-right: 2%;
 }
+
+.btn {
+    color: #fff;
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 160px; 
+    position: relative;
+    width: 100%;     
+    :hover { text-decoration: none; }
+    text-transform: uppercase;
+    
+  }
 
 .nav-links {
     text-decoration: none;
     color: var(--paynes-gray);
     font-size: larger;
+    margin:0px 8px;
+
+    svg {
+        height: 45px;
+        left: 0;
+        position: absolute;
+        top: 0; 
+        width: 100%; 
+      }
+      
+      rect {
+        fill: none;
+        stroke: var(--paynes-gray);
+        stroke-width: 5;
+        stroke-dasharray: 422, 0;
+        transition: all 0.35s linear;
+      }
 }
 
-.home-link {
-    margin-left:2%;
-    text-decoration: none;
-}
+.nav-links:hover {
+    letter-spacing: 1px;
+    
+    rect {
+      stroke-width: 5;
+      stroke-dasharray: 15, 310;
+      stroke-dashoffset: 48;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
 
-h1 {
-    color: var(--paynes-gray);
-}
 
 .content-div {
     margin-bottom: 10px;
+}
+
+.hero {
+    text-align: center;
+    height:400px;
+    display: block;
+    width: 100%;
+    background-color: #e1dfdf;   
+}
+
+#hero-text {
+    margin-top: 0;
+    width:100%;
+    height:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .para {
