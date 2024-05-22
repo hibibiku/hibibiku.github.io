@@ -57,9 +57,13 @@ body {
     font-size: larger;
 }
 
+.home-link {
+    margin-left:2%;
+    text-decoration: none;
+}
+
 h1 {
     color: var(--paynes-gray);
-    margin-left:2%;
 }
 
 .content-div {
