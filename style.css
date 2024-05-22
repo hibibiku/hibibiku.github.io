@@ -54,7 +54,7 @@ h2 {
 }
   
   /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content-div {
+.sticky + #content-div {
     padding-top: 81px;
 }
 
@@ -115,11 +115,6 @@ h2 {
     }
   }
 
-
-.content-div {
-    margin-bottom: 10px;
-}
-
 .hero {
     text-align: center;
     height:400px;
@@ -144,6 +139,10 @@ h2 {
     box-shadow:  10px 10px 20px #9f9f9f,
                 -10px -10px 20px #ffffff;
     padding:30px;
+}
+
+.bottom-pad {
+    padding-bottom: 50px;
 }
 
 .footer-div {

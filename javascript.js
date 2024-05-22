@@ -7,13 +7,18 @@ function myFunction() {
     // Get the navbar
 var navbar = document.getElementById("navbar-div");
 
+var content = document.getElementById("content-div");
+
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
 
   if (window.scrollY > sticky) {
     navbar.classList.add("sticky")
+    
   } else {
     navbar.classList.remove("sticky");
   }
+
+    
 }
  });
