@@ -20,24 +20,6 @@ const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 var content = document.getElementById("content-div");
   var top = $(document).scrollTop();
 
-
-  if (document.body.classList.contains("dark-theme")) {
-    if (window.screenY <= top) {
-      content.style.backgroundColor = "var(--chestnut)";
-    }
-    else {
-      content.style.backgroundColor = "";
-    }
-  }
-  else {
-    if (window.screenY <= top) {
-      content.style.backgroundColor = "var(--melon)";
-    }
-    else {
-      content.style.backgroundColor = "";
-    }
-  }
-
 if (prefersDarkScheme.matches) {
   sessionStorage.setItem("mode", "dark");
   document.body.classList.add("dark-theme");
@@ -68,6 +50,23 @@ if (prefersDarkScheme.matches) {
       document.getElementById("toggle-mode").style.backgroundColor = "#2b2a33";
       document.getElementById("toggle-mode").style.color = "#e9e9ed";
       content.style.backgroundColor = "var(--melon)";
+    }
+
+    if (document.body.classList.contains("dark-theme")) {
+      if (window.screenY <= top) {
+        content.style.backgroundColor = "var(--chestnut)";
+      }
+      else {
+        content.style.backgroundColor = "";
+      }
+    }
+    else {
+      if (window.screenY <= top) {
+        content.style.backgroundColor = "var(--melon)";
+      }
+      else {
+        content.style.backgroundColor = "";
+      }
     }
       
     
