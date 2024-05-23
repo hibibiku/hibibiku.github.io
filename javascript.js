@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 $(document).ready(function() {
 
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
 var content = document.getElementById("content-div");
   var top = $(document).scrollTop();
 
@@ -57,18 +56,20 @@ if (prefersDarkScheme.matches) {
   dark = function dark() {
     var element = document.body;
     element.classList.toggle("dark-theme");
-
     if (document.body.classList.contains("dark-theme")){
       document.getElementById("toggle-mode").innerHTML = "Light Mode";
       document.getElementById("toggle-mode").style.backgroundColor = "#e9e9ed";
       document.getElementById("toggle-mode").style.color = "#2b2a33";
+      content.style.backgroundColor = "var(--chestnut)";
     }
     else
     {
       document.getElementById("toggle-mode").innerHTML = "Dark Mode";
       document.getElementById("toggle-mode").style.backgroundColor = "#2b2a33";
       document.getElementById("toggle-mode").style.color = "#e9e9ed";
+      content.style.backgroundColor = "var(--melon)";
     }
+      
     
  }
 
@@ -77,7 +78,7 @@ window.onscroll = function() {myFunction()};
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
-  var content = document.getElementById("content-div");
+
   var top = $(document).scrollTop();
 
   if (document.body.classList.contains("dark-theme")) {
