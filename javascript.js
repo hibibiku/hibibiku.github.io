@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let overlay = document.getElementsByClassName("overlay")[0];
   let loading = document.getElementsByClassName("loading")[0];
   let loadingbg = document.getElementsByClassName("loading-bg")[0];
+  
 
   const load = document.getElementById("dot");
   setInterval(function() {load.innerHTML += " . "}, 500);
@@ -19,6 +20,7 @@ const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 var content = document.getElementById("content-div");
   var top = $(document).scrollTop();
+
 
   if (document.body.classList.contains("dark-theme")) {
     if (window.screenY <= top) {
@@ -38,11 +40,13 @@ var content = document.getElementById("content-div");
   }
 
 if (prefersDarkScheme.matches) {
+  sessionStorage.setItem("mode", "dark");
   document.body.classList.add("dark-theme");
   document.getElementById("toggle-mode").innerHTML = "Light Mode";
   document.getElementById("toggle-mode").style.backgroundColor = "#e9e9ed";
   document.getElementById("toggle-mode").style.color = "#2b2a33";
 } else {
+  sessionStorage.setItem("mode", "light");
   document.body.classList.remove("dark-theme");
   document.getElementById("toggle-mode").innerHTML = "Dark Mode";
   document.getElementById("toggle-mode").style.backgroundColor = "#2b2a33";

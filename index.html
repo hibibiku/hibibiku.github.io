@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="dark light">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="mode()">
     <div class="loading-bg">
     <div class="loading">
         <p id="loading">Loading</p>
@@ -16,7 +16,7 @@
     </div>
     <div class="overlay">
         <div id="navbar-div" class="sticky">
-            <a class="btn home-link" href="#"><svg><rect fill="none" width="100%" height="100%"/></svg><h2 >Portfolio</h2></a>
+            <a class="btn home-link" href="" onclick="window.location.reload(true);"><svg><rect fill="none" width="100%" height="100%"/></svg><h2 >Portfolio</h2></a>
             <div class="nav-menu">
                 <a class="btn nav-links" href="aboutme.html"><svg><rect fill="none" width="100%" height="100%"/></svg>About Me</a>
                 <a class="btn nav-links" href="works.html"><svg><rect fill="none" width="100%" height="100%"/></svg>Works</a>

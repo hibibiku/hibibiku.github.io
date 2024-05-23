@@ -8,7 +8,6 @@
     --paynes-gray: #495867ff;
     --gunmetal: #2B3D41ff;
     --chestnut: #904337ff;
-
 }
 
 #toggle-mode {
@@ -149,6 +148,30 @@ body {
     
   }
 
+  .selected {
+    text-decoration: none;
+    color: var(--paynes-gray);
+    font-size: larger;
+    margin:0px 8px;
+
+    svg {
+        height: 45px;
+        left: 0;
+        position: absolute;
+        top: 0; 
+        width: 100%; 
+      }
+      
+      rect {
+        fill: none;
+        stroke: var(--paynes-gray);
+        stroke-width: 5;
+        stroke-dasharray: 50, 165;
+        stroke-dashoffset: 30;
+      }
+}
+
+  
 .nav-links {
     text-decoration: none;
     color: var(--paynes-gray);
@@ -337,6 +360,33 @@ body {
           transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
         }
       }
+      
+      .selected {
+        text-decoration: none;
+        color: var(--desert-sand);
+        font-size: larger;
+        margin:0px 8px;
+    
+        svg {
+            height: 45px;
+            left: 0;
+            position: absolute;
+            top: 0; 
+            width: 100%; 
+          }
+          
+          rect {
+            fill: none;
+            stroke: var(--desert-sand);
+            stroke-width: 5;
+            stroke-dasharray: 50, 165;
+            stroke-dashoffset: 30;
+          }
+        }
+
+        .selected:hover {
+            letter-spacing: 1px;
+          }
 
       .nav-links {
         text-decoration: none;
